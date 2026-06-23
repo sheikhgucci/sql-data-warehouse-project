@@ -1,3 +1,39 @@
+/*
+
+# Data Warehouse Initialization
+
+This script initializes a SQL Server data warehouse environment by creating a dedicated **DataWarehouse** database and establishing a multi-layered schema architecture following modern data engineering best practices.
+
+## Architecture
+
+The solution is organized into three data layers:
+
+### Bronze Layer
+
+The **Bronze** schema serves as the raw ingestion layer where source system data is loaded with minimal transformation. This layer preserves the original structure and content of incoming datasets for auditing and traceability purposes.
+
+### Silver Layer
+
+The **Silver** schema contains cleansed, standardized, and transformed data. Data quality checks, deduplication, and business rule validations are typically performed in this layer to prepare data for analytical consumption.
+
+### Gold Layer
+
+The **Gold** schema stores business-ready, curated datasets optimized for reporting, dashboards, and analytics. This layer provides trusted data models and aggregated metrics for end users and decision-makers.
+
+## Objects Created
+
+* Database: `DataWarehouse`
+* Schema: `bronze`
+* Schema: `silver`
+* Schema: `gold`
+
+## Usage
+
+Execute the script in SQL Server Management Studio (SSMS) or another compatible SQL Server client to create the database and schema structure before loading or transforming data.
+*/
+
+
+
 
 --Create database 'DataWarehouse'
 
